@@ -1,0 +1,17 @@
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem;
+  background-color: transparent;
+}
+.header a {
+  color: #495057;
+  font-size: 1.25rem;
+  text-decoration: none;
+}
+.header a:hover {
+  text-decoration: underline;
+  color: #dcab8a;
+}

@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./Calc.css";
 
 const Calc = () => {
   const [screen, setScreen] = useState("");
 
-  const handleClick = (e) => {
-    const targetValue = e.target.value;
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const targetValue = (e.target as HTMLButtonElement).value;
     setScreen(screen + targetValue);
   };
 
-  const signHandleClick = (e) => {
-    const targetValue = e.target.value;
+  const signHandleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const targetValue = (e.target as HTMLButtonElement).value;
     setScreen(screen + targetValue);
   };
 
@@ -21,7 +21,9 @@ const Calc = () => {
 
   const equalsHandleClick = () => {
     const result = eval(screen.replace("x", "*"));
-    setScreen(result);
+    if (result === Infinity) {
+      setScreen("Error. Division by zero");
+    } else setScreen(result);
   };
 
   return (
