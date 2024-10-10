@@ -56,3 +56,17 @@ p {
   align-items: center;
   justify-content: space-between;
 }
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 10px;
+  border-bottom: 2px solid #eee;
+  border-radius: 15px;
+}
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+.todo-item:hover {
+  background-color: #f9f9f9;
+}
